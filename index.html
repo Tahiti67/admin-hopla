@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Template Admin WEBDEV</title>
+	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="public/css/reset.css">
+	<script src="public/js/library/jquery-3.3.1.min.js"></script>
+	<script src="public/js/date_heure.js"></script>
+
+	<script src="https://use.fontawesome.com/8c0a5934fc.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="sidebar">
+			<button class="sidebar-toggle"><i class="fa fa-bars" aria-hidden="true"></i></button>
+			<div class="header-sidebar">
+				<div class="center">
+					<a href="#">
+						<img src="public/images/logo.png" alt="logo">
+					</a>
+				</div>
+			</div>
+			<div class="date-nav">
+				<span class="date" id="date_heure"></span>
+				<script type="text/javascript">window.onload = date_heure('date_heure');</script>
+			</div>
+			<ul class="nav">
+				<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+				<li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Créer un article</a></li>
+				<li><a href="#"><i class="fa fa-list" aria-hidden="true"></i> Lister les articles</a></li>
+				<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Utilisateurs</a></li>
+				<li><a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i> SEO</a></li>
+				<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Configuration</a></li>
+			</ul>
+			<div class="footer-sidebar">
+				Connecté en tant que oktomus
+				<a class="link" href="#">déconnexion</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="header-content">
+				<h1 class="ttl">Dashboard</h1>
+				<p class="alert-welcome">Welcome</p>
+			</div>
+			<h2 class="ttl">Tableau</h2>
+			<table>
+				<tr>
+					<th>Company</th>
+					<th>Contact</th>
+					<th>Country</th>
+				</tr>
+				<tr>
+					<td>Alfreds Futterkiste</td>
+					<td>Maria Anders</td>
+					<td>Germany</td>
+				</tr>
+				<tr>
+					<td>Centro comercial Moctezuma</td>
+					<td>Francisco Chang</td>
+					<td>Mexico</td>
+				</tr>
+				<tr>
+					<td>Ernst Handel</td>
+					<td>Roland Mendel</td>
+					<td>Austria</td>
+				</tr>
+				<tr>
+					<td>Island Trading</td>
+					<td>Helen Bennett</td>
+					<td>UK</td>
+				</tr>
+				<tr>
+					<td>Laughing Bacchus Winecellars</td>
+					<td>Yoshi Tannamuri</td>
+					<td>Canada</td>
+				</tr>
+				<tr>
+					<td>Magazzini Alimentari Riuniti</td>
+					<td>Giovanni Rovelli</td>
+					<td>Italy</td>
+				</tr>
+			</table>
+			
+			<h2 class="ttl">Formulaire</h2>
+			<br>
+			<form>
+				<label class="label-form">Champ Input</label>
+				
+				<input class="input-form" type="text">
+				
+				<label class="label-form">Champ Textarea</label>
+				
+				<textarea class="textarea-form"></textarea>
+				
+				<button class="btn">Button</button>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var toggleBtn = document.querySelector('.sidebar-toggle');
+	var sidebar = document.querySelector('.sidebar');
+
+	toggleBtn.addEventListener('click', function() {
+		toggleBtn.classList.toggle('is-closed');
+		sidebar.classList.toggle('is-closed');
+	})
+	</script>
+</body>
+</html>
